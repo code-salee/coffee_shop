@@ -34,4 +34,6 @@ class FontSize {
 
 class ImageUrl{
   static const onboarding = "assets/images/onboarding.png";
+  static const banner = "assets/images/banner.png";
+
 }

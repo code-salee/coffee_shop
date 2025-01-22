@@ -6,7 +6,16 @@ import 'package:coffee_shop/pages/order.coffee.page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const CoffeShopApp());
+  runApp(MaterialApp(
+    title: 'Coffee Shop',
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFFC67C4E)),
+      useMaterial3: true,
+    ),
+      home: CoffeShopApp()
+  )
+  );
 }
 
 class CoffeShopApp extends StatelessWidget {
@@ -16,13 +25,6 @@ class CoffeShopApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Coffee Shop',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFFC67C4E)),
-        useMaterial3: true,
-      ),
-      // home: const OnboardingPage(),
       initialRoute: '/',
       routes: {
         '/': (context) => const OnboardingPage(),
